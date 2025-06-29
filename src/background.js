@@ -4,7 +4,7 @@ const chosenImage = img[Math.floor(Math.random() * img.length)];
 
 const bgImage = document.createElement("img");
 
-bgImage.src = `/public/img/${chosenImage}`;
+bgImage.src = `/img/${chosenImage}`;
 document.body.appendChild(bgImage);
 
 const overlay = document.createElement("div");
