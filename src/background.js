@@ -8,7 +8,7 @@ const chosenImage = img[Math.floor(Math.random() * img.length)];
 
 const bgImage = document.createElement("img");
 
-bgImage.src = `${import.meta.env.BASE_URL}img/${chosenImage}`;
+bgImage.src = chosenImage;
 document.body.appendChild(bgImage);
 
 const overlay = document.createElement("div");
