@@ -51,7 +51,7 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      // gap: 30px;
+      gap: 15px;
       h2 {
         max-width: 80px;
       }
@@ -78,9 +78,7 @@ body {
       align-items: center;
       gap: 25px;
       // hidden이 적용이 안되서, 직접 CSS상에 추가함.
-      .login-form .hidden {
-        display: none;
-      }
+
       .login-form {
         display: flex;
         flex-direction: column;
@@ -129,8 +127,10 @@ body {
       grid-column: 1 / span 3;
       grid-row: 2 / 3;
       width: 100%;
-      justify-self: center;
-      align-self: flex-start;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       gap: 25px;
       input {
         max-width: 350px;
@@ -259,21 +259,21 @@ body {
             }
           }
         }
-        .toggle-done-list {
-          background: transparent;
-          border: none;
-          color: white;
-          font-size: 15px;
-          font-weight: 500;
-          cursor: pointer;
-          opacity: 0.7;
-          transition: opacity 0.5s linear ease-in-out;
+      }
+      .toggle-done-list {
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 0.5s linear ease-in-out;
 
-          &:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s linear ease-in-out;
-            opacity: 1;
-          }
+        &:hover {
+          transform: scale(1.05);
+          transition: transform 0.3s linear ease-in-out;
+          opacity: 1;
         }
       }
       .todo-form__done-list.show {
@@ -285,26 +285,26 @@ body {
         padding-bottom: 25px;
       }
     }
-    .footer__container {
-      grid-column: 1 / span 3;
-      grid-row: 4;
-      width: 100%;
-      height: 100%;
-      .quotes {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        span:first-child {
-          font-size: 20px;
-          font-weight: 600;
-        }
-        span:last-child {
-          font-size: 18px;
-          font-weight: 600;
-          font-style: italic;
-        }
+  }
+  .footer__container {
+    grid-column: 1 / span 3;
+    grid-row: 4;
+    width: 100%;
+    height: 100%;
+    .quotes {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      span:first-child {
+        font-size: 20px;
+        font-weight: 600;
+      }
+      span:last-child {
+        font-size: 18px;
+        font-weight: 600;
+        font-style: italic;
       }
     }
   }
