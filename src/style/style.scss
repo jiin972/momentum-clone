@@ -35,21 +35,23 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    gap: 10px;
-    padding-left: 25px;
+    align-items: flex-end;
+    padding-right: 25px;
     font-size: 25px;
     font-weight: 600;
     text-transform: uppercase;
+    box-sizing: border-box;
     .weather {
       display: flex;
+      justify-content: space-between;
       align-items: center;
       gap: 15px;
     }
     .date {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 21px;
+      // gap: 30px;
       h2 {
         max-width: 80px;
       }
@@ -76,7 +78,7 @@ body {
       align-items: center;
       gap: 25px;
       // hidden이 적용이 안되서, 직접 CSS상에 추가함.
-      .login-form.hidden {
+      .login-form .hidden {
         display: none;
       }
       .login-form {
@@ -126,15 +128,11 @@ body {
     .todo-form__container {
       grid-column: 1 / span 3;
       grid-row: 2 / 3;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      gap: 15px;
       width: 100%;
-      // max-width: 450px;
+      justify-self: center;
+      align-self: flex-start;
+      gap: 25px;
       input {
-        width: 100%;
         max-width: 350px;
         height: 50px;
         box-sizing: border-box;
@@ -145,7 +143,7 @@ body {
         font-size: 32px;
         text-align: center;
         &::placeholder {
-          font-size: 18px;
+          font-size: 17px;
           color: white;
           text-align: center;
           letter-spacing: 1px;
@@ -262,7 +260,7 @@ body {
           }
         }
         .toggle-done-list {
-          background-color: transparent;
+          background: transparent;
           border: none;
           color: white;
           font-size: 15px;
@@ -289,8 +287,9 @@ body {
     }
     .footer__container {
       grid-column: 1 / span 3;
-      grid-row: 5;
-      min-height: 50px;
+      grid-row: 4;
+      width: 100%;
+      height: 100%;
       .quotes {
         display: flex;
         flex-direction: column;
