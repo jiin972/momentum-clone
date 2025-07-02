@@ -37,7 +37,9 @@ function paintTodo(newTodo, listType = "todo") {
 
   if (listType === "done") {
     const returnButton = document.createElement("button");
-    returnButton.innerText = "↩";
+    const iconElement = document.createElement("i");
+    iconElement.classList.add("fa-solid", "fa-rotate-left");
+    returnButton.appendChild(iconElement);
     returnButton.type = "button";
     returnButton.addEventListener("click", toggleCompleteTodo);
 
@@ -46,7 +48,9 @@ function paintTodo(newTodo, listType = "todo") {
     li.appendChild(deleteButton);
   } else {
     const completeButton = document.createElement("button");
-    completeButton.innerText = "✅";
+    const iconElement = document.createElement("i");
+    iconElement.classList.add("fa-solid", "fa-check");
+    completeButton.appendChild(iconElement);
     completeButton.type = "button";
     completeButton.addEventListener("click", toggleCompleteTodo);
 
@@ -62,6 +66,7 @@ function paintTodo(newTodo, listType = "todo") {
   }
 }
 function paintGreeting() {}
+
 //-----Todo 관리 로직-----//
 function handleDoneListButton(event) {
   todoDoneList.classList.toggle("show");
@@ -73,7 +78,7 @@ function handleDoneListButton(event) {
 }
 
 function toggleCompleteTodo(event) {
-  const li = event.target.parentElement;
+  const li = event.target.closest("li"); //closest()메서드사용.
   const idToComplete = parseInt(li.id);
   const todoToMove = toDos.find((toDo) => toDo.id === idToComplete);
 
