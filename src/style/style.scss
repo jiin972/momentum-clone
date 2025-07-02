@@ -42,6 +42,7 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     box-sizing: border-box;
+    gap: 5px;
     .weather {
       display: flex;
       justify-content: space-between;
@@ -49,13 +50,15 @@ body {
       gap: 15px;
     }
     .date {
-      width: 30%;
+      width: 100%;
       display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
       gap: 5px;
       h2 {
-        max-width: 80px;
+        max-width: 165px;
+        font-size: 4vw;
       }
       h3 {
         font-style: italic;
@@ -176,7 +179,7 @@ body {
           justify-content: center;
           align-items: flex-start;
           gap: 15px;
-          font-size: 30px;
+          font-size: 2.5vw;
           box-sizing: border-box;
           li {
             width: 100%;
@@ -245,7 +248,7 @@ body {
           justify-content: space-around;
           align-items: center;
           gap: 15px;
-          font-size: 15px;
+          font-size: 2vw;
           span {
             flex-grow: 1;
           }
