@@ -73,6 +73,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: minmax(100px, auto) 0.4fr auto;
     padding-top: 15px;
+
     gap: 15px;
     .login-form__container {
       grid-column: 1 / -1;
